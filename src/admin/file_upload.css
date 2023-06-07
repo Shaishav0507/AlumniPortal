@@ -1,0 +1,35 @@
+.file-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-upload-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-upload-container input[type="file"] {
+  margin-bottom: 10px;
+}
+
+.file-upload-container textarea {
+  width: 300px;
+  height: 100px;
+  margin-bottom: 10px;
+  resize: none;
+}
+
+.file-upload-container button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.file-upload-container img {
+  max-width: 300px;
+  margin-bottom: 10px;
+}

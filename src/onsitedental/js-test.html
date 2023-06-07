@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+    <style type="text/css">
+    #map {
+        height: 400px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="owl-carousel">
+        <div id="customNav" class="owl-nav">
+            <div>dfghdgfhdg</div>
+            <div>dfghdgfhdg</div>
+            <div>dfghdgfhdg</div>
+            <div>dfghdgfhdg</div>
+            <div>dfghdgfhdg</div>
+        </div>
+        <div id="customDots" class="owl-dots">
+            <div>dfsdahasf</div>
+            <div>dfsdahasf</div>
+            <div>dfsdahasf</div>
+            <div>dfsdahasf</div>
+        </div>
+        <div class="click-here" style="padding-bottom: 30px;padding-top: 20px;">Click here</div>
+    </div>
+    <div id="map"></div>
+    <script>
+    var myLatLng = { lat: 43.648917, lng: -79.377592 }
+    $('.click-here').click(function() {
+        myLatLng = { lat: 42.734117, lng: -84.551768 };
+        initMap();
+    });
+
+    function initMap() {
+        // Styles a map in night mode.
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: myLatLng,
+            zoom: 19,
+            styles: [{
+                "elementType": "all",
+                
+            }]
+
+
+        });
+
+        let marker = new google.maps.Marker({
+            map: map,
+            position: myLatLng,
+            icon: {
+                url: "http://125.63.74.98:8385/wp-content/uploads/2019/01/Group-3.png"
+            }
+        });
+    }
+    $(window).on('load', function() {
+        initMap();
+    });
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBZyET37T2zNCsqUocTHjkxkiSrr19wfxE" async defer></script>
+    <script type="text/javascript">
+    var a = ['a', 'b', 'c', 'c', 'b', 'a'];
+    var d = [];
+
+
+    for (var i = 0; i < a.length; i++) {
+
+
+        var t = d.indexOf(a[i]);
+        if (t != -1) {
+            a.splice(a[i], 1)
+            i = i - 1;
+        } else {
+            d.push(a[i])
+        }
+    }
+    a.sort();
+    console.log(a)
+    </script>
+</body>
+
+</html>
